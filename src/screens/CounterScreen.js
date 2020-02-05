@@ -2,22 +2,22 @@ import React, { useState } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 
 const CounterScreen = () => {
-    const [counter, setCounter] = useState(0);
+    const [currentCounter, setCounter] = useState(0);
     return (
         <View> 
             <Button 
                 title='Increase'
                 onPress={ () => {
-                    setCounter(counter + 1);
+                    setCounter(currentCounter + 1);
                 }}
             />
             <Button 
                 title='Decrease'
                 onPress={ () => {
-                    setCounter(counter - 1);
+                    setCounter(currentCounter - 1);
                 }}
             />
-            <Text style={styles.text}>Counter is {counter}</Text>
+            <Text style={styles.text}>Current Counter is {currentCounter}</Text>
         </View>
     );
 };
